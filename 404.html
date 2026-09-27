@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página no encontrada — mini bites</title>
-  <meta name="robots" content="noindex">
-  <link rel="icon" href="/mini-bites/assets/favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/mini-bites/css/styles.css?v=6">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada | mini bites</title>
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#FDF8F5">
+    <link rel="icon" href="/mini-bites/assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/mini-bites/assets/favicon.ico" sizes="any">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Fredoka', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        cream: '#FDF8F5',
+                        choco: '#3E2723',
+                        butter: '#FEE180',
+                        pinky: '#FFD3E0',
+                    },
+                    boxShadow: {
+                        'float': '0 30px 60px -20px rgba(62, 39, 35, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FDF8F5; color: #3E2723; -webkit-font-smoothing: antialiased; }
+    </style>
 </head>
-<body>
-  <div class="error-page">
-    <span class="eyebrow">Cake pops artesanales</span>
-    <h1>404</h1>
-    <p>No encontramos esta página. Puede que el enlace esté mal escrito o que la página se haya movido.</p>
-    <a href="/mini-bites/" class="btn btn-dark">Volver al inicio</a>
-  </div>
+<body class="font-body min-h-[100dvh] flex items-center justify-center px-4 py-16 text-center">
+    <main class="max-w-md flex flex-col items-center">
+        <picture>
+            <source srcset="/mini-bites/assets/images/logo.webp" type="image/webp">
+            <img src="/mini-bites/assets/images/logo.png" width="240" height="240" alt="Logo de mini bites" class="w-32 h-32 mb-6">
+        </picture>
+        <span class="inline-flex px-4 py-2 bg-pinky/40 rounded-full font-bold text-sm mb-4 border border-choco/10">Cake pops artesanales</span>
+        <h1 class="font-display font-bold text-8xl tracking-tighter mb-4">404</h1>
+        <p class="text-lg text-choco/75 font-medium mb-10">No encontramos esta página. Puede que el enlace esté mal escrito o que la página se haya movido.</p>
+        <a href="/mini-bites/" class="inline-flex items-center justify-center bg-choco text-cream px-8 py-4 rounded-full font-display font-bold text-xl shadow-float hover:bg-butter hover:text-choco transition-colors">
+            Volver al inicio
+        </a>
+    </main>
 </body>
 </html>

@@ -1,33 +1,30 @@
 # mini bites — landing page
 
 Landing page de una sola página para mini bites, un emprendimiento de cake pops artesanales, construida en
-HTML, CSS y JavaScript planos (sin frameworks ni paso de build), publicada con GitHub Pages.
+HTML con Tailwind CSS por CDN (sin frameworks ni paso de build), publicada con GitHub Pages.
 
 🔗 **Sitio publicado:** https://sberrcamacho.github.io/mini-bites/
 
 ## Estructura
 
 ```
-index.html                Página principal
+index.html                Página principal (estilos con Tailwind CDN y JS inline)
 404.html                   Página de error 404
-css/styles.css             Estilos (design tokens: colores, tipografía, spacing)
-js/main.js                 Menú móvil y año dinámico del footer
 assets/images/             Fotos optimizadas (JPG + WebP)
 assets/favicon.svg, ...    Favicon e íconos
 robots.txt, sitemap.xml    SEO técnico
-design_handoff_cake_pops_landing/   Especificación de diseño original (referencia histórica)
+design_handoff_cake_pops_landing/   Especificación de diseño anterior (referencia histórica)
 ```
 
 ## Contenido y diseño
 
-El diseño reproduce fielmente la especificación de
-`design_handoff_cake_pops_landing/Cake Pops Landing.dc.html` y su README (colores, tipografía
-`DM Serif Display` + `Jost`, spacing, radios y copy), con la interfaz escalada ~19% para una
-presencia visual más grande. El hero, la tarjeta de Vainilla y la sección "Nosotros" ya usan fotos
-reales del producto (`hero-actual.png`, `vainilla-actual.png`, `nosotros-actual.png` en el
-handoff); el destacado "Nuevo sabor" y las tarjetas de Red Velvet y Vainilla con Oreo siguen
-usando fotos de stock provistas en el handoff y deben reemplazarse por fotografía propia del
-negocio antes de usarse en producción a largo plazo.
+La dirección visual se generó con AIDesigner y se adaptó a mano con el contenido real del negocio.
+Tipografía `Fredoka` (títulos) + `DM Sans` (texto), paleta crema `#FDF8F5`, café `#3E2723`,
+mantequilla `#FEE180` y rosa `#FFD3E0`, definida en el `tailwind.config` inline de `index.html`.
+Secciones: portada, menú de sabores (Red Velvet, Oreo, Vainilla), cómo pedir (WhatsApp + Nequi),
+socios y cierre con llamado a WhatsApp.
+
+Requiere conexión a internet para cargar Tailwind, las fuentes de Google y los íconos de Phosphor.
 
 ## Desarrollo local
 
