@@ -1,0 +1,11 @@
+{
+  "name": "mini-bites",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles.css -o ./assets/css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/styles.css -o ./assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
